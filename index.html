@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <title>SM Sejlads</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #006994;
+            color: white;
+            padding: 10px 20px;
+            position: relative;
+        }
+
+        .header-left {
+            position: absolute;
+            left: 20px;
+        }
+
+        .header-left h1 {
+            margin: 0;
+        }
+
+        .header-center .logo {
+            height: 90px;
+            width: 180;
+        }
+
+        nav {
+            background-color: #004466;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .full-width-image {
+            width: 100%;
+            height: auto;
+            max-height: 2000px;
+            object-fit: cover;
+        }
+
+        .tekst-sektion, .booking, .omos {
+            padding: 20px;
+        }
+
+        .booking-option {
+            background-color: #ffffff;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .booking-option img {
+            max-width: 200px;
+            width: 100%;
+            height: auto;
+            border-radius: 6px;
+            object-fit: contain;
+        }
+
+        .booking-option .booking-text {
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .tekst-billede {
+            margin-bottom: 20px;
+        }
+
+        .tekst-billede img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin-top: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-left">
+            <h1>SM Sejlads</h1>
+        </div>
+        <div class="header-center">
+            <img src="1.png" alt="Logo" class="logo">
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#" onclick="visSide('forside')">Forside</a></li>
+            <li><a href="#" onclick="visSide('book')">Book nu</a></li>
+            <li><a href="#" onclick="visSide('omos')">Om os</a></li>
+        </ul>
+    </nav>
+
+    <!-- Forside -->
+    <main id="forside">
+        <img src="2.jpeg" alt="Havudsigt" class="full-width-image">
+        <section class="tekst-sektion">
+            <h2>Velkommen ombord!</h2>
+            <p>
+                Oplev Vejles smukke havn fra vandet med os! Vi tilbyder unikke sejlture, hvor natur, hygge og eventyr mødes på åbent vand.<br><br>
+                Uanset om du leder efter romantik, musik, fart eller luksus, har vi en sejltur, der passer til dig.<br><br>
+                Klik dig videre til <strong>"Book nu"</strong> og find din næste oplevelse til søs!
+            </p>
+        </section>
+    </main>
+
+    <!-- Book nu -->
+    <main id="book" class="hidden">
+        <section class="booking">
+            <h2>Book din oplevelse</h2>
+
+            <section class="booking-option">
+                <img src="3.jpeg" alt="Love Boat">
+                <div class="booking-text">
+                    <h3>1. Love Boat</h3>
+                    <p>
+                        Tag din udkårne med på en smuk og romantisk aftensejltur i hjertet af Vejle Havn.<br><br>
+                        Der er dækket op med stearinlys, hyggelig stemning – og som prikken over i’et får I selskab af en kærlig komiker, der bringer både grin og varme ombord.<br><br>
+                        Kontakt os for booking og pris: <strong>+45 42 37 83 18</strong>
+                    </p>
+                </div>
+            </section>
+
+            <section class="booking-option">
+                <img src="4.jpeg" alt="Adventure Tur">
+                <div class="booking-text">
+                    <h3>2. Adventure Tur</h3>
+                    <p>
+                        Gør dig klar til en hæsblæsende oplevelse! Her prøver du kræfter med Vejles vilde vande, hvor fart, sjov og adrenalin møder den rå natur.<br><br>
+                        Perfekt til grupper, eventyrlystne og dem, der vil mærke vinden i håret!<br><br>
+                        Kontakt os for booking og pris: <strong>+45 42 37 83 18</strong>
+                    </p>
+                </div>
+            </section>
+
+            <section class="booking-option">
+                <img src="5.jpeg" alt="Deluxe Tur">
+                <div class="booking-text">
+                    <h3>3. Deluxe Tur</h3>
+                    <p>
+                        Denne tur er for dig, der vil have det hele. Gourmet-snacks, valgfri underholdning, bløde tæpper og skræddersyet rute – du bestemmer!<br><br>
+                        Forkæl dig selv eller overrask en du holder af med en oplevelse i særklasse.<br><br>
+                        Kontakt os for booking og pris: <strong>+45 42 37 83 18</strong>
+                    </p>
+                </div>
+            </section>
+
+            <section class="booking-option">
+                <img src="6.jpeg" alt="Musik på vand">
+                <div class="booking-text">
+                    <h3>4. Musik på vand</h3>
+                    <p>
+                        Vi bringer Nilen til Vejles havn! Oplev en sanselig sejltur med live guitarspil og bongo-trommer i solnedgangen.<br><br>
+                        Musik, rytme og bølgeskvulp – en unik aften for både øre og sjæl.<br><br>
+                        Kontakt os for booking og pris: <strong>+45 42 37 83 18</strong>
+                    </p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <!-- Om os -->
+    <main id="omos" class="hidden">
+        <section class="omos">
+            <section class="tekst-billede">
+                <h2>Siden 1967</h2>
+                <p>
+                    Kaptajn Marius og sømanden Mads har sejlet sammen i over 50 år. De har sammen oplevet stormfulde nætter, rolige solopgange og uforglemmelige eventyr på åbent hav.<br><br>
+                    Under krigen deltog de i hemmelige missioner, hvor de smuglede flygtninge og modstandsfolk til "sikkerhed". De undgik fjendtlige patruljer, kæmpede mod elementerne – og blev legender i de lokale havne.<br><br>
+                    Specielt blandt kvinder. I dag sejler de for at dele glæden ved havet og fortælle deres historier til nye generationer.
+                </p>
+                <img src="8.jpeg" alt="Besætningen">
+            </section>
+
+            <section class="tekst-billede">
+                <p>
+                    Med passion, erfaring og godt humør sørger vi for, at hver sejltur er noget særligt. Fra romantik til fest, fra eventyr til total afslapning – vi har det hele.<br><br>
+                    Kom ombord – og bliv en del af historien. 
+                </p>
+                <img src="7.jpeg" alt="Båd i solnedgang">
+            </section>
+        </section>
+    </main>
+
+    <!-- Navigation Script -->
+    <script>
+        function visSide(id) {
+            document.getElementById('forside').classList.add('hidden');
+            document.getElementById('book').classList.add('hidden');
+            document.getElementById('omos').classList.add('hidden');
+            document.getElementById(id).classList.remove('hidden');
+        }
+    </script>
+
+</body>
+</html>
